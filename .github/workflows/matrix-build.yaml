@@ -22,9 +22,9 @@ jobs:
         python-version: ${{ matrix.python-version }}
 
     - name: This step will install dependencies  
-      run: pip install -r CI-CD-Labs/requirements.txt
-
-    - name: this step will run the test app
+      run: pip install -r CI-CD-Labs\.github\workflows\requirements.txt
+    
+     -name: this step will run the test app
       run: python -m unittest discover
       # Runs all unittest tests in the current directory and subdirectories.
 
