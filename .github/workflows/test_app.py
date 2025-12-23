@@ -1,4 +1,4 @@
-# This Python app will be used to test whether my simple python app will work across different enviroments via the matrix build after i have committed 
+# This Python app will be used to test whether my simple python app will work across different environments via the matrix build after i have committed 
 
 import unittest
 
