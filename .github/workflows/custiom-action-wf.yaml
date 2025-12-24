@@ -2,8 +2,6 @@ name: Workflow containing a custom action
 
 on: [push]
 
-runs-on: ubuntu-latest
-
 jobs:
   build:
     runs-on: ubuntu-latest
