@@ -14,7 +14,7 @@ jobs:
       uses: anees12369/CI-CD-Custom-Actions@main
       with: 
         who-to-greet: 'Anees'
-        # name on input + an input 
+        # name on input + an input (my name)
 
 
 
