@@ -16,7 +16,7 @@ jobs:
     - name: this step will checkout the code
       uses: actions/checkout@v2
 
-    - name: This step will setup python 
+    - name: This step will setup python using different versions
       uses: actions/setup-python@v2
       with:
         python-version: ${{ matrix.python-version }}
