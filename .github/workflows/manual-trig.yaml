@@ -8,7 +8,7 @@ on:
       python-version:
         description: 'Choose python version'
         required: true
-        default '3.9'
+        default: '3.9'
         type: choice
         - 3.11
         - 3.9
