@@ -1,7 +1,5 @@
 name: Using a manual trigger within a workflow
 
-name: Manual trigger example
-
 on:
   push:
   workflow_dispatch:
