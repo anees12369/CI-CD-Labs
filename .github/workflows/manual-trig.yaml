@@ -19,7 +19,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: [${{ github.event.inputs.python-version }}]
+        python-version: ${{ fromJson(format('["{0}"]', github.event.inputs.python-version)) }}
 
     steps:
       - name: Checkout the code
