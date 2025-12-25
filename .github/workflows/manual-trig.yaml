@@ -1,7 +1,9 @@
 name: Using a manual trigger within a workflow 
 
 # Manual trigger 
-on: 
+name: Using a manual trigger within a workflow
+
+on:
   push:
   workflow_dispatch:
     inputs:
@@ -10,31 +12,27 @@ on:
         required: true
         default: '3.9'
         type: choice
-        - 3.11
-        - 3.9
-        - 3.10
+        options:
+          - '3.11'
+          - '3.10'
+          - '3.9'
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    strategy:
-        matrix:
-          python-version: ["3.11", "3.9", "3.10"]
-   
-   
+
     steps:
-    - name: this step will checkout the code
-      uses: actions/checkout@v2
+      - name: Checkout the code
+        uses: actions/checkout@v4
 
-    - name: This step will setup python using different versions
-      uses: actions/setup-python@v2
-      with:
-        python-version: ${{ matrix.python-version }}
-    
-    - name: this step will run the test app
-      run: python -m unittest discover
-      # Runs all unittest tests in the current directory and subdirectories.
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ github.event.inputs.python-version }}
 
-    - name: tells us whether previous steps were successful
-      run: echo "tests successful on Python ${{ matrix.python-version }}"
-      if: success()
+      - name: Run tests
+        run: python -m unittest discover
+
+      - name: Confirm success
+        if: success()
+        run: echo "Tests successful on Python ${{ github.event.inputs.python-version }}"
