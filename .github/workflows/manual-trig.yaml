@@ -19,7 +19,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
         matrix:
-          python-version: [${{ github.event.inputs.python-version }}]
+          python-version: ${{ github.event.inputs.python-version }}
 
    
     steps:
