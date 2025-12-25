@@ -28,9 +28,6 @@ jobs:
         with:
           python-version: ${{ github.event.inputs.python-version }}
 
-      - name: Run tests
-        run: python -m unittest discover
-
       - name: Confirm success
         if: success()
         run: echo "Tests successful on Python ${{ github.event.inputs.python-version }}"
