@@ -1,8 +1,6 @@
 name: Using a manual trigger within a workflow 
 
 # Manual trigger 
-name: Using a manual trigger within a workflow
-
 on:
   push:
   workflow_dispatch:
