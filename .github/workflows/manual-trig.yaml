@@ -1,5 +1,6 @@
 name: Using a manual trigger within a workflow
 
+# Manual trugger 
 on:
   push:
   workflow_dispatch:
